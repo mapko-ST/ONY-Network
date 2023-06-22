@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>ONY.network (projet d'école)</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="assets/img/logo_footer_white.png" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- header -->
+    <div class="container-fluid text-center" id="header">
+        <img src="assets/img/logo_header_white.png" width="200" height="200" id="headerLogo" alt="Logo ONY Network (image of servers)">
+
+        <div class="container" id="domainGroup">
+            <p class="text-start" id="domainText">Offrez-vous un domaine en .fr ou .eu</p>
+
+            <div class="input-group">
+                <span class="input-group-text d-none d-sm-block" id="www">www.</span>
+                <input type="text" class="form-control" aria-label="Domaine" id="searchedDomain" placeholder="...">
+
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="domainExtension">.fr</button>
+                <ul class="dropdown-menu dropdown-custom" style="z-index: 2000">
+                    <li><a class="dropdown-item" href="#null" onclick="changeDomain(this.innerText, true)">.eu</a></li>
+                    <li><a class="dropdown-item" href="#null" onclick="changeDomain(this.innerText, true)">.fr</a></li>
+                </ul>
+
+                <button class="btn" type="button" id="commandDomain">
+                    <span class="d-none d-sm-block">Réserver</span>
+                    <img class="d-sm-none" src="assets/img/search.svg" alt="Icone d'une loupe" width="24" height="24">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md sticky-top shadow-sm" id="navbar">
+        <div class="container-fluid" id="navbarContainer">
+            <button class="navbar-toggler nav-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" id="menuBurger">
+                <span class="navbar-toggler-icon" id="navbarBurgerButtonIcon"></span>
+                <span class="siteName" >ONY.network</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav text-center">
+                    <a class="nav-link d-none d-md-block siteName" href="#header">ONY.network</a>
+                    <a class="nav-link d-block d-md-none simpleLink" href="#pres">Qui sommes nous ?</a>
+                    <a class="nav-link simpleLink" href="#web">Web</a>
+                    <a class="nav-link simpleLink" href="#cloud">Cloud</a>
+                    <a class="nav-link simpleLink" href="#null" onclick="openBootModal('modalContact')">Contact</a>
+
+                    <a class="nav-link" href="#modalPromo" onclick="openBootModal('modalPromo')" id="promoLink">OFFRES DU MOMENT</a>
+                </div>
+            </div>
+            <div class="d-flex align-items-center" id="navBarRightButtons">
+                <div class="nav-item dropdown">
+                    <button class="btn btn-link nav-button" type="button" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="currency">
+                        € EUR
+                    </button>
+                    <ul class="dropdown-menu dropdown-custom">
+                        <li><a class="dropdown-item" href="#null" onclick="changeCurrency(this.innerText, true)">$ USD</a></li>
+                        <li><a class="dropdown-item" href="#null" onclick="changeCurrency(this.innerText, true)">€ EUR</a></li>
+                    </ul>
+                </div>
+
+                <button class="btn btn-link nav-button" type="button" onclick="openBootModal('modalBag')">
+                    <img src="assets/img/bag.svg" alt="Panier" width="30" height="30" id="bag">
+                    <span class="position-absolute translate-middle badge rounded-pill" id="bagBadge">
+                        0
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- pres -->
+    <div class="container">
+        <div class="row align-items-center" id="pres">
+            <!-- Contenu -->
+            <div class="col-lg-8 order-2 text-md-start">
+                <div class="row">
+                    <!-- Titre -->
+                    <div class="col-12 text-center text-md-start">
+                        <h1 class="section-title">Qui sommes nous ?</h1>
+                    </div>
+
+                    <!-- Texte -->
+                    <div class="col-12">
+                        <p>
+                            Chez ONY.network, nous sommes une équipe passionnée dédiée à fournir des solutions d'hébergement Web et Cloud de qualité supérieure. Fondée avec une vision d'offrir des services fiables et sécurisés, notre entreprise fictive est un acteur majeur de l'industrie de l'hébergement en ligne. Nous comprenons l'importance cruciale d'une présence en ligne solide pour les entreprises d'aujourd'hui, et c'est pourquoi nous nous engageons à offrir une gamme complète de services d'hébergement adaptés à vos besoins spécifiques.
+                        </p>
+
+                        <p>
+                            Nous nous engageons à fournir des services de qualité supérieure, associés à un support technique exceptionnel. Notre équipe d'experts est là pour vous accompagner à chaque étape, que ce soit pour la configuration de votre domaine, le déploiement de votre site ou la résolution de tout problème éventuel. Nous sommes déterminés à faire de votre expérience avec ONY Network une expérience fluide et réussie.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image -->
+            <div class="col-lg-4 order-2 order-md-2 text-center text-lg-end">
+                <img class="img-thumbnail" src="assets/img/pres_img.png" alt="Image travaux web"/>
+            </div>
+        </div>
+    </div>
+
+    <!-- web -->
+    <div class="container" id="web">
+        <h1 class="section-title">Hébergements web</h1>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card noBorderRadius">
+                    <img src="assets/img/web_1.png" class="card-img noBorderRadius" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title" id="nameWeb1">Web perso</h4>
+                        <p class="card-text" id="priceWeb1">À partir de 3€ TTC/mois</p>
+                        <ul>
+                            <li>100 Go d'espace disque</li>
+                            <li>2 comptes mail (2 x 5 Go)</li>
+                            <li>Base SQL de 100 Mo</li>
+                            <li>SSL Offert</li>
+                            <li>Optimisé pour WordPress</li>
+                            <li>Support pour le HTML, CSS, JS, et PHP</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center card-bottom">
+                        <button class="btn card-button btn-details" onclick="openBootModal('modalWeb')">Plus de détails</button>
+                        <button class="btn card-button btn-add" id="addBagWeb1" onclick="addToBag(this, 'Web1')">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card noBorderRadius">
+                    <img src="assets/img/web_2.png" class="card-img noBorderRadius" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title" id="nameWeb2">Web performance</h4>
+                        <p class="card-text" id="priceWeb2">À partir de 9€ TTC/mois</p>
+                        <ul>
+                            <li>500 Go d'espace disque (NVME)</li>
+                            <li>5 comptes mail (2 x 20 Go)</li>
+                            <li>Base SQL de 2 Go</li>
+                            <li>SSL Offert</li>
+                            <li>Optimisé pour WordPress</li>
+                            <li>Support pour le HTML, CSS, JS, PHP, Node.js, Python, Ruby</li>
+                            <li>Ressources mutualisées</li>
+                            <li>Synchronisation CDN</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center card-bottom">
+                        <button class="btn card-button btn-details" onclick="openBootModal('modalWeb')">Plus de détails</button>
+                        <button class="btn card-button btn-add" id="addBagWeb2" onclick="addToBag(this, 'Web2')">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card noBorderRadius">
+                    <img src="assets/img/web_3.png" class="card-img noBorderRadius" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title" id="nameWeb3">Web premium</h4>
+                        <p class="card-text" id="priceWeb3">À partir de 15€ TTC/mois</p>
+                        <ul>
+                            <li>1 To d'espace disque (NVME)</li>
+                            <li>Compte mails illimités</li>
+                            <li>Base SQL locale</li>
+                            <li>SSL Offert</li>
+                            <li>Optimisé pour WordPress, Prestashop, Drupal, et Joomla!</li>
+                            <li>Support pour le HTML, CSS, JS, PHP, Node.js, Python, Ruby</li>
+                            <li>Ressources mutualisées</li>
+                            <li>Synchronisation CDN</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center card-bottom">
+                        <button class="btn card-button btn-details" onclick="openBootModal('modalWeb')">Plus de détails</button>
+                        <button class="btn card-button btn-add" id="addBagWeb3" onclick="addToBag(this, 'Web3')">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cloud -->
+    <div class="container" id="cloud">
+        <h1 class="section-title">Hébergements cloud & CDN</h1>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card noBorderRadius">
+                    <img src="assets/img/cloud_1.png" class="card-img noBorderRadius" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title" id="nameCloud1">Cloud classic</h4>
+                        <p class="card-text" id="priceCloud1">À partir de 3€ TTC/mois</p>
+                        <ul>
+                            <li>Jusqu'à 10 To HDD</li>
+                            <li>CDN Europe & Amérique du nord (8 datacenters)</li>
+                            <li>Sauvegarde manuelle</li>
+                            <li>Optimisé pour le stockage intensif</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center card-bottom">
+                        <button class="btn card-button btn-details" onclick="openBootModal('modalCloud')">Plus de détails</button>
+                        <button class="btn card-button btn-add" id="addBagCloud1" onclick="addToBag(this, 'Cloud1')">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card noBorderRadius">
+                    <img src="assets/img/cloud_2.png" class="card-img noBorderRadius" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title" id="nameCloud2">Cloud premium</h4>
+                        <p class="card-text" id="priceCloud2">À partir de 9€ TTC/mois</p>
+                        <ul>
+                            <li>Jusqu'à 25 To SSD</li>
+                            <li>CDN Europe, Amérique du nord, Asie (16 datacenters)</li>
+                            <li>Sauvegarde automatique</li>
+                            <li>Optimisé pour le stockage intensif</li>
+                            <li>Accès root</li>
+                            <li>Jusqu'à 2 Gbit/s illimité de bande passante</li>
+                            <li><b>Protection anti-perte PREMIUM</b>*</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center card-bottom">
+                        <button class="btn card-button btn-details" onclick="openBootModal('modalCloud')">Plus de détails</button>
+                        <button class="btn card-button btn-add" id="addBagCloud2" onclick="addToBag(this, 'Cloud2')">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card noBorderRadius">
+                    <img src="assets/img/cloud_3.png" class="card-img noBorderRadius" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title" id="nameCloud3">Cloud ultime</h4>
+                        <p class="card-text" id="priceCloud3">À partir de 15€ TTC/mois</p>
+                        <ul>
+                            <li>Jusqu'à 50 To RAID*</li>
+                            <li>CDN Europe, Amérique, Asie, Océanique</li>
+                            <li>Sauvegarde automatique</li>
+                            <li>Optimisé pour le stockage intensif</li>
+                            <li>Accès root</li>
+                            <li>Jusqu'à 10 Gbit/s illimité de bande passante</li>
+                            <li><b>Protection anti-perte PREMIUM</b>*</li>
+                        </ul>
+                    </div>
+
+                    <div class="text-center card-bottom">
+                        <button class="btn card-button btn-details" onclick="openBootModal('modalCloud')">Plus de détails</button>
+                        <button class="btn card-button btn-add" id="addBagCloud3" onclick="addToBag(this, 'Cloud3')">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------  -------  -------  -------  ------- -->
+    <!-- -------  -------  MODALES  -------  ------- -->
+    <!-- -------  -------  -------  -------  ------- -->
+    <!-- Modal Promos -->
+    <div class="modal fade show" id="modalPromo" tabindex="-1" aria-labelledby="modalPromoLabel" aria-hidden="true">
+        <div id="intModalPromo" class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="assets/img/promo.gif" alt="Promotions !" width="225" height="184">
+
+                    <p>Jusqu'à -50% pour les nouveaux clients !</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Contact -->
+    <div class="modal fade show" id="modalContact" tabindex="-1" aria-labelledby="modalContact" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nous contacter</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate>
+                        <!-- Prénom Nom -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName">Prénom <span class="text-muted">(requis)</span></label>
+                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName">Nom <span class="text-muted">(requis)</span></label>
+                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                            </div>
+                        </div>
+
+                        <!-- Mail & téléphone -->
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName">Adresse mail <span class="text-muted">(requis)</span></label>
+                                <input type="text" class="form-control" id="mail" placeholder="" value="" required>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName">Numéro de téléphone <span class="text-muted">(requis)</span></label>
+                                <input type="text" class="form-control" id="tel" placeholder="" value="" required>
+                            </div>
+                        </div>
+
+                        <!-- Objet -->
+                        <div class="mb-3">
+                            <label for="object">Objet <span class="text-muted">(requis)</span></label>
+                            <select class="form-select d-block w-100" id="object" required>
+                                <option>Demande d'information</option>
+                                <option>Devis pour infrastructure importante</option>
+                                <option>J'ai un problème</option>
+                                <option>J'ai une réclamation</option>
+                                <option>Autre</option>
+                            </select>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="mb-3">
+                            <label for="message">Message <span class="text-muted">(requis)</span></label>
+                            <textarea class="form-control" placeholder="" id="message" style="height: 100px"></textarea>
+                        </div>
+
+                        <!-- Accord -->
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="same-address">
+                            <label class="custom-control-label" for="same-address">J'autorise <span class="company-green">ONY.network</span> à me recontacter <span class="text-muted">(requis)</span></label>
+                        </div>
+
+                        <!-- Bouton (désactivé car démo) -->
+                        <a href="#" class="btn btn-add" style="margin-top: 20px">Envoyer</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Web -->
+    <div class="modal fade show" id="modalWeb" tabindex="-1" aria-labelledby="modalWeb" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nos services Web</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Notre gamme de services d'hébergement Web chez ONY.network offre des solutions flexibles et puissantes qui répondent aux besoins des développeurs et des entreprises en ligne. Nous comprenons l'importance de la compatibilité avec les technologies modernes, c'est pourquoi nous nous assurons que nos services sont parfaitement adaptés à des plateformes populaires telles que Node.js, WordPress et Python.</p>
+                    <p>Que vous soyez un développeur passionné ou une entreprise cherchant à tirer le meilleur parti de ces technologies, nos services d'hébergement Web garantissent une compatibilité totale avec Node.js, WordPress et Python. Rejoignez-nous dès aujourd'hui pour profiter d'un environnement d'hébergement puissant, sécurisé et parfaitement adapté à vos besoins spécifiques.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cloud -->
+    <div class="modal fade show" id="modalCloud" tabindex="-1" aria-labelledby="modalWeb" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nos services Cloud</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Notre offre d'hébergement Cloud chez ONY.network est conçue pour répondre aux besoins de performance, de flexibilité et de fiabilité de votre entreprise en ligne. Une caractéristique clé de nos services est notre réseau de diffusion de contenu (CDN) intégré, qui améliore considérablement les performances de votre site Web.</p>
+                    <p>Grâce à notre CDN avancé, nous vous offrons la possibilité de distribuer votre contenu sur un réseau mondial de serveurs. Cela signifie que vos visiteurs bénéficieront d'un accès rapide et fiable à votre site Web, peu importe où ils se trouvent dans le monde. En optimisant la livraison de vos ressources statiques, telles que les images, les vidéos et les fichiers CSS, notre CDN réduit les temps de chargement et améliore l'expérience utilisateur globale.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Crédits -->
+    <div class="modal fade show" id="modalCredits" tabindex="-1" aria-labelledby="modalWeb" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Crédits</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Site réalisé par <a href="https://arthurbeau.fr" target="_blank">Arthur B</a>, <a href="https://www.marcsteliga.fr" target="_blank">Marc S</a> et <a href="https://github.com/albancardon" target="_blank">Alban C</a>.</h6>
+                    <p>Projet n°3 formation Développeur .NET à <a href="https://lamanu.fr/">La Manu</a>.</p>
+                    <h6>Images :</h6>
+                    <ul>
+                        <li>
+                            Logo par <a href="https://www.marcsteliga.fr" target="_blank">Marc</a>.
+                        </li>
+                        <li>
+                            Autres images par les contributeurs de <a href="https://pixabay.com">Pixabay</a>.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal CGV -->
+    <div class="modal fade show" id="modalCGV" tabindex="-1" aria-labelledby="modalWeb" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Conditions générales de vente</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <a href="#">Tous les documents légaux sont disponibles uniquement au format PDF, dont le lien de téléchargement est accessible en cliquant sur ce message.</a>
+                        <p style="margin-top:10px">ONY.network se réserve la faculté de modifier à tout moment les présents documents. Le Client sera informé de ces modifications par tout moyen utile 30 (trente) jours au moins avant leur entrée en vigueur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Panier -->
+    <div class="modal fade show" id="modalBag" tabindex="-1" aria-labelledby="modalWeb" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" id="modalBagContent">
+                <div class="modal-header">
+                    <h5 class="modal-title">Panier</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body" id="bagBody">
+                </div>
+                <button class="btn card-button btn-add" id="nextStep" onclick="">Étape suivante</button>
+            </div>
+        </div>
+    </div>
+    <!-- -------  -------  -------  -------  ------- -->
+    <!-- -------  -------  -------  -------  ------- -->
+    <!-- -------  -------  -------  -------  ------- -->
+
+    <!-- footer -->
+    <div class="container-fluid" id="footerContainer">
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3" id="footer">
+                <p class="col-md-4 mb-0">&copy; 2023 ONY NETWORK</p>
+
+                <a href="#header" class="col-md-4 align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none d-none d-md-flex">
+                    <img class="bi me-2" src="assets/img/logo_footer_white.png" alt="Logo ONY Network" width="50" height="50">
+                </a>
+
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item"><a href="#null" class="nav-link px-2 simpleLink" onclick="openBootModal('modalCredits')">Crédits</a></li>
+                    <li class="nav-item"><a href="#null" class="nav-link px-2 simpleLink" onclick="openBootModal('modalCGV')">C.G.V</a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-header {
+    border-radius: 0;
+    background-color: #0c0d29;
+    color: white;
+}
+
+
+#header {
+    background: url('../img/header.png') no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 0;
+}
+
+#headerLogo {
+    margin-top: 30px;
+}
+
+#domainGroup {
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+#promoLink {
+    color: #ffc107;
+}
+
+.siteName {
+    color: white;
+}
+
+#searchedDomain, #www, #commandDomain {
+    border-radius: 0;
+    border: none;
+    background-color:white;
+}
+
+#www {
+    color: #9b9b9b;
+}
+
+#domainExtension {
+    background-color: white;
+    border:none;
+    outline: none;
+}
+
+#domainExtension:focus {
+    border:none;
+    outline: none;
+}
+
+#domainExtension:hover {
+    border:none;
+    outline: none;
+}
+
+#domainExtension:active {
+    border:none;
+    outline: none;
+}
+
+#commandDomain {
+    background-color: #ffc107;
+}
+
+#searchedDomain:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+@media (min-width: 576px) { /* si >sm */
+    #domainGroup {
+        width: 576px;
+    }
+}
+
+@media (max-width: 575px) { /* si <sm */
+    #headerLogo {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+
+
+@media (min-width: 768px) { /* si >md */
+    #promoLink {
+        margin-left: 40px;
+    }
+
+    .siteName {
+        margin-right: 40px;
+    }
+
+    #navbarContainer {
+        max-width: 1320px;
+    }
+
+    #bagBadge {
+        top: 20px;
+    }
+}
+
+@media (max-width: 768px) { /* si <md ( MENU BURGER ) */
+
+    #navBarRightButtons {
+        right: 0 !important;
+        top: 8px !important;
+        position: absolute !important;
+    }
+
+    .siteName {
+        margin-left: 5px;
+        font-size: 1.1rem;
+    }
+
+
+    #bagBadge {
+        top: 8px;
+        right: -7px;
+    }
+}
+
+.nav-link {
+    color: white;
+}
+
+.noBorderRadius {
+    border-radius: 0
+}
+
+.dropdown-custom {
+    border-radius: 0;
+    padding: 0;
+    min-width: fit-content;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #0c0d29;
+}
+
+.dropdown-item:hover {
+    color: white;
+}
+
+.card-body {
+    border-left: 1px solid #0c0d29;
+    border-right: 1px solid #0c0d29;
+}
+
+.card-bottom {
+    border-left: 1px solid #0c0d29;
+    border-right: 1px solid #0c0d29;
+    border-bottom: 1px solid #0c0d29;
+}
+
+.simpleLink {
+    border-bottom: 2px solid #0c0d29;
+    border-radius: 5px;
+}
+
+.simpleLink:hover {
+    color: #206a79;
+}
+
+.siteName:hover {
+    color: white;
+}
+
+#bag {
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(149deg) brightness(108%) contrast(101%);
+}
+
+#navbarBurgerButtonIcon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+#menuBurger:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#menuBurger {
+
+}
+
+#domainText {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+#navbar {
+    padding: 0;
+    background-color: #0c0d29;
+}
+
+#currency {
+    color: white;
+    text-decoration: none;
+}
+
+#currency:hover {
+    color: white;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+}
+
+.nav-button:hover {
+    background: none;
+    border: none;
+}
+
+#navbarContainer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#bagBadge {
+    background-color: #e8b720;
+}
+
+#pres {
+    margin-top: 30px;
+    color: #0c0d29;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#pres h1 {
+}
+
+#pres p {
+    text-align: justify;
+}
+
+#pres img {
+    border: none;
+}
+
+#web {
+    margin-bottom: 30px;
+}
+
+.card-body {
+    color: #0c0d29;
+}
+
+
+
+
+
+.card-button {
+    margin-top: 0;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+.card-button:hover {
+
+}
+
+.card-button:focus {
+
+}
+
+.card-button:active {
+
+}
+
+
+
+
+.btn-add {
+    color: white;
+    background-color: #0c0d29;
+    border: 1px solid #0c0d29;
+    border-radius: 0;
+    transition: none;
+    animation: none;
+
+}
+
+.btn-add:hover {
+    border: 1px solid #0c0d29;
+    color: #0c0d29;
+}
+
+.btn-add:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #0c0d29;
+}
+
+.btn-add:active {
+    background-color: white;
+    color: #0c0d29;
+    border: 1px solid #0c0d29;
+}
+
+
+
+
+.btn-details {
+    color: #0c0d29;
+    border: 1px solid #0c0d29;
+    border-radius: 0;
+    transition: none;
+    animation: none;
+
+}
+
+.btn-details:hover {
+    background-color: #0c0d29;
+    border: 1px solid #0c0d29;
+    color: white;
+}
+
+.btn-details:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #0c0d29;
+}
+
+.btn-details:active {
+    background-color: #0c0d29;
+    color: white;
+    border: 1px solid #0c0d29;
+}
+
+
+#modalContact input, #modalContact textarea, #modalContact select {
+    border-radius: 0;
+}
+
+#modalContact input:active, #modalContact textarea:active, #modalContact select:active {
+    outline: none;
+    border: none;
+}
+
+
+
+
+#footerContainer {
+    background-color: #0c0d29;
+}
+
+#footer {
+    margin-top: 30px;
+    color: white;
+}
+
+
+.lienSouligner {
+    border-bottom: 2px solid #206a79;
+    border-radius: 5px;
+}
+
+
+
+/*effet promotion*/
+.visibility {
+    visibility: visible;
+}
+.hiden {
+    visibility: hidden;
+}
